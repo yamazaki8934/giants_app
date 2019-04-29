@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		600E1409BBE08DA4BFC2BCDD /* Pods_giants_app.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 36915FB2658A282EBB997B8C /* Pods_giants_app.framework */; };
 		8E92D8F0227E90B50083E37A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E92D8EF227E90B50083E37A /* AppDelegate.swift */; };
 		8E92D8F2227E90B50083E37A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E92D8F1227E90B50083E37A /* ViewController.swift */; };
 		8E92D8F5227E90B50083E37A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8E92D8F3227E90B50083E37A /* Main.storyboard */; };
@@ -15,6 +16,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		36915FB2658A282EBB997B8C /* Pods_giants_app.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_giants_app.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		7CDBEC66C1B3066030715F9C /* Pods-giants_app.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-giants_app.release.xcconfig"; path = "Pods/Target Support Files/Pods-giants_app/Pods-giants_app.release.xcconfig"; sourceTree = "<group>"; };
+		808CCB2D6BD791FF25D415BE /* Pods-giants_app.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-giants_app.debug.xcconfig"; path = "Pods/Target Support Files/Pods-giants_app/Pods-giants_app.debug.xcconfig"; sourceTree = "<group>"; };
 		8E92D8EC227E90B50083E37A /* giants_app.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = giants_app.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8E92D8EF227E90B50083E37A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8E92D8F1227E90B50083E37A /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -29,6 +33,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				600E1409BBE08DA4BFC2BCDD /* Pods_giants_app.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -40,6 +45,8 @@
 			children = (
 				8E92D8EE227E90B50083E37A /* giants_app */,
 				8E92D8ED227E90B50083E37A /* Products */,
+				E6732B51BEFEA9E4FEB669C4 /* Pods */,
+				FB114A0FAC36686469954553 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -64,6 +71,23 @@
 			path = giants_app;
 			sourceTree = "<group>";
 		};
+		E6732B51BEFEA9E4FEB669C4 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				808CCB2D6BD791FF25D415BE /* Pods-giants_app.debug.xcconfig */,
+				7CDBEC66C1B3066030715F9C /* Pods-giants_app.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		FB114A0FAC36686469954553 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				36915FB2658A282EBB997B8C /* Pods_giants_app.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -71,9 +95,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 8E92D8FE227E90B70083E37A /* Build configuration list for PBXNativeTarget "giants_app" */;
 			buildPhases = (
+				8C6863E6A15C1E3C7F789001 /* [CP] Check Pods Manifest.lock */,
 				8E92D8E8227E90B50083E37A /* Sources */,
 				8E92D8E9227E90B50083E37A /* Frameworks */,
 				8E92D8EA227E90B50083E37A /* Resources */,
+				5F03CB8B2F182760A52E6ECE /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -129,6 +155,55 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		5F03CB8B2F182760A52E6ECE /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-giants_app/Pods-giants_app-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/RxCocoa/RxCocoa.framework",
+				"${BUILT_PRODUCTS_DIR}/RxSwift/RxSwift.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxCocoa.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxSwift.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-giants_app/Pods-giants_app-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		8C6863E6A15C1E3C7F789001 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-giants_app-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		8E92D8E8227E90B50083E37A /* Sources */ = {
@@ -280,6 +355,7 @@
 		};
 		8E92D8FF227E90B70083E37A /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 808CCB2D6BD791FF25D415BE /* Pods-giants_app.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -298,6 +374,7 @@
 		};
 		8E92D900227E90B70083E37A /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7CDBEC66C1B3066030715F9C /* Pods-giants_app.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
