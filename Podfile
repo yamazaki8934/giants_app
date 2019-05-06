@@ -8,4 +8,6 @@ target 'giants_app' do
   # Pods for giants_app
   pod 'RxSwift', '~> 4.3.1'
   pod 'RxCocoa', '~> 4.3.1'
+  pod 'Alamofire'
+  pod 'Alamofire-SwiftyJSON'
 end
