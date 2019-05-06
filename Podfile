@@ -10,4 +10,5 @@ target 'giants_app' do
   pod 'RxCocoa', '~> 4.3.1'
   pod 'Alamofire'
   pod 'Alamofire-SwiftyJSON'
+  pod 'ObjectMapper', '~> 3.4'
 end
