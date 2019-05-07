@@ -14,6 +14,8 @@
 		8E92D8F7227E90B70083E37A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8E92D8F6227E90B70083E37A /* Assets.xcassets */; };
 		8E92D8FA227E90B70083E37A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8E92D8F8227E90B70083E37A /* LaunchScreen.storyboard */; };
 		8E92D907227FDD7F0083E37A /* APIRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E92D906227FDD7F0083E37A /* APIRequest.swift */; };
+		8E92D909228028810083E37A /* ListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E92D908228028810083E37A /* ListViewModel.swift */; };
+		8E92D90B228031290083E37A /* Player.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E92D90A228031290083E37A /* Player.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +30,8 @@
 		8E92D8F9227E90B70083E37A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		8E92D8FB227E90B70083E37A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8E92D906227FDD7F0083E37A /* APIRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIRequest.swift; sourceTree = "<group>"; };
+		8E92D908228028810083E37A /* ListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListViewModel.swift; sourceTree = "<group>"; };
+		8E92D90A228031290083E37A /* Player.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Player.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -66,9 +70,8 @@
 				8E92D905227FDBD70083E37A /* View */,
 				8E92D904227FDBCE0083E37A /* ViewController */,
 				8E92D903227FDBC30083E37A /* ViewModel */,
-				8E92D902227FDB8E0083E37A /* Common */,
+				8E92D902227FDB8E0083E37A /* Model */,
 				8E92D8EF227E90B50083E37A /* AppDelegate.swift */,
-				8E92D8F1227E90B50083E37A /* ViewController.swift */,
 				8E92D8F3227E90B50083E37A /* Main.storyboard */,
 				8E92D8F6227E90B70083E37A /* Assets.xcassets */,
 				8E92D8F8227E90B70083E37A /* LaunchScreen.storyboard */,
@@ -77,17 +80,19 @@
 			path = giants_app;
 			sourceTree = "<group>";
 		};
-		8E92D902227FDB8E0083E37A /* Common */ = {
+		8E92D902227FDB8E0083E37A /* Model */ = {
 			isa = PBXGroup;
 			children = (
 				8E92D906227FDD7F0083E37A /* APIRequest.swift */,
+				8E92D90A228031290083E37A /* Player.swift */,
 			);
-			path = Common;
+			path = Model;
 			sourceTree = "<group>";
 		};
 		8E92D903227FDBC30083E37A /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
+				8E92D908228028810083E37A /* ListViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -95,6 +100,7 @@
 		8E92D904227FDBCE0083E37A /* ViewController */ = {
 			isa = PBXGroup;
 			children = (
+				8E92D8F1227E90B50083E37A /* ViewController.swift */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -203,9 +209,12 @@
 				"${SRCROOT}/Pods/Target Support Files/Pods-giants_app/Pods-giants_app-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
 				"${BUILT_PRODUCTS_DIR}/Alamofire-SwiftyJSON/Alamofire_SwiftyJSON.framework",
+				"${BUILT_PRODUCTS_DIR}/Differentiator/Differentiator.framework",
 				"${BUILT_PRODUCTS_DIR}/ObjectMapper/ObjectMapper.framework",
 				"${BUILT_PRODUCTS_DIR}/RxCocoa/RxCocoa.framework",
+				"${BUILT_PRODUCTS_DIR}/RxDataSources/RxDataSources.framework",
 				"${BUILT_PRODUCTS_DIR}/RxSwift/RxSwift.framework",
+				"${BUILT_PRODUCTS_DIR}/RxSwiftExt/RxSwiftExt.framework",
 				"${BUILT_PRODUCTS_DIR}/SwiftyJSON/SwiftyJSON.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
@@ -214,9 +223,12 @@
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire_SwiftyJSON.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Differentiator.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ObjectMapper.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxCocoa.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxDataSources.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxSwift.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxSwiftExt.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyJSON.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -255,6 +267,8 @@
 			files = (
 				8E92D8F2227E90B50083E37A /* ViewController.swift in Sources */,
 				8E92D907227FDD7F0083E37A /* APIRequest.swift in Sources */,
+				8E92D909228028810083E37A /* ListViewModel.swift in Sources */,
+				8E92D90B228031290083E37A /* Player.swift in Sources */,
 				8E92D8F0227E90B50083E37A /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

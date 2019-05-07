@@ -10,9 +10,20 @@ import Foundation
 import RxSwift
 import Alamofire
 import Alamofire_SwiftyJSON
+import ObjectMapper
+
+struct HogeEntity: Mappable {
+    init?(map: Map) {
+    }
+    mutating func mapping(map: Map) {
+        // ここでパースする
+    }
+}
 
 final class APIRequest {
     private let baseUrl: String = "https://c7f9eb4a.ngrok.io/api/v1/giants/players"
+    
+    
     
     func createSingle<T: Mappable>(withEndpoint endpoint: String,
                                    method: HTTPMethod = .get,
@@ -35,6 +46,25 @@ final class APIRequest {
             return Disposables.create { request.cancel() }
         }
     }
+    
+    func getHoge() -> Single<HogeEntity> {
+        return createSingle(withEndpoint: "https://c7f9eb4a.ngrok.io/api/v1/giants/players")
+    }
+    
+    private let disposeBag = DisposeBag()
+    
+    func callAPI() {
+        getHoge()
+            .subscribe(
+                onSuccess: { [unowned self] entity in
+                    // 成功時に呼ばれるので処理をする。（例えば取得したモデルをViewに渡すなど）
+                },
+                onError: { [unowned self] error in
+                    // 失敗時に呼ばれるので処理をする。（例えばエラーをViewに通知するなど）
+                }
+            ).disposed(by: disposeBag)
+    }
+    
 //    func getResponse() -> Observable<DataResponse<JSON>> {
 //        return Observable.create { observer in
 //            Alamofire.request(self.baseUrl)
